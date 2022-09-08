@@ -3,7 +3,7 @@ for i = 1:6
     img = gs;   %Loading the grayscale image
     num = 3;    %Setting the nhood for filter
     
-    filt = myfilter("std", img, num);  %Calling the range filter
+    filt = myfilter("rang", img, num);  %Calling the range filter
     filtBW = ~imbinarize(filt); %Binarizing the filter
     imgBW = img < 250 & img > 80;
     mask = filtBW - imgBW;  %Making the mask
